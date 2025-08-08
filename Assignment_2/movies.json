@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Inception",
+        "year": 2010,
+        "category": "Action",
+        "is_watched": false
+    },
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "category": "Action",
+        "is_watched": true
+    },
+    {
+        "title": "Interstellar",
+        "year": 2014,
+        "category": "Sci-Fi",
+        "is_watched": false
+    }
+]

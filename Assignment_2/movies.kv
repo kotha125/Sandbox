@@ -1,0 +1,48 @@
+#:kivy 2.1.0
+
+BoxLayout:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    Spinner:
+        id: sort_spinner
+        text: "Sort by"
+        values: ["title", "year", "category", "is_watched"]
+        on_text: app.sort_movies(self.text)
+
+    ScrollView:
+        GridLayout:
+            id: movie_grid
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 5
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: 40
+        spacing: 5
+
+        TextInput:
+            id: title_input
+            hint_text: "Title"
+
+        TextInput:
+            id: year_input
+            hint_text: "Year"
+            input_filter: "int"
+
+        TextInput:
+            id: category_input
+            hint_text: "Category"
+
+        Button:
+            text: "Add Movie"
+            on_press: app.add_movie()
+
+    Label:
+        id: status_label
+        size_hint_y: None
+        height: 30
